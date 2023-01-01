@@ -5,7 +5,7 @@ require('dotenv').config();
 
 //asynchronous function cause want to be able to wait or do tasks simultaneously
 async function main() {
-  //Attaining local Ganache blockchain as provider with RPC
+  //Attaining Goerli Testnet blockchain env via Alchemy as provider with RPC
   const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
   //Binding one of Ganache accounts using their private key which we have encrypted with ethers.js
   const encryptedJsonKey = fs.readFileSync(
