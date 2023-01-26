@@ -7,7 +7,7 @@ require('dotenv').config();
 async function main() {
   //Attaining Goerli Testnet blockchain env via Alchemy as provider with RPC
   const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
-  //Binding one of Ganache accounts using their private key which we have encrypted with ethers.js
+  //Binding MetaMask testnet wallet using their private key which we have encrypted with ethers.js
   const encryptedJsonKey = fs.readFileSync(
     './.encryptedPrivateKey.json',
     'utf8'
